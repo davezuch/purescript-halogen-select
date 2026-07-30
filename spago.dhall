@@ -4,7 +4,7 @@ You can edit this file as you like.
 -}
 { name = "halogen-select"
 , license = "Apache-2.0"
-, repository = "https://github.com/citizennet/purescript-halogen-select"
+, repository = "https://github.com/davezuch/purescript-halogen-select"
 , dependencies =
   [ "halogen"
   , "halogen-hooks"

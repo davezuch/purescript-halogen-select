@@ -14,16 +14,16 @@ In this tutorial we'll build a typeahead with the following features:
 Along the way, we'll see how to extend `Select`'s features by embedding parent queries (we'll use this to embed the "fetch data" button in the list).
 
 !!! info
-    This tutorial assumes you've followed the steps in the [Project Setup](https://citizennet.github.io/purescript-halogen-select/tutorials/getting-started/) section. While not necessary, this code is tested with those steps in mind.
+    This tutorial assumes you've followed the steps in the [Project Setup](https://davezuch.github.io/purescript-halogen-select/tutorials/getting-started/) section. While not necessary, this code is tested with those steps in mind.
 
-    It also assumes familiarity with Halogen and intermediate PureScript experience or that you have already completed the [more thorough, beginner-friendly dropdown tutorial](https://citizennet.github.io/purescript-halogen-select/tutorials/dropdown). If you need a Halogen refresher, try the official [Halogen guide](https://github.com/slamdata/purescript-halogen/tree/master/docs) or the [whirlwind tour](https://citizennet.github.io/purescript-halogen-select/tutorials/getting-started/#a-whirlwind-tour-of-our-starter-component) of our starter component.
+    It also assumes familiarity with Halogen and intermediate PureScript experience or that you have already completed the [more thorough, beginner-friendly dropdown tutorial](https://davezuch.github.io/purescript-halogen-select/tutorials/dropdown). If you need a Halogen refresher, try the official [Halogen guide](https://github.com/slamdata/purescript-halogen/tree/master/docs) or the [whirlwind tour](https://davezuch.github.io/purescript-halogen-select/tutorials/getting-started/#a-whirlwind-tour-of-our-starter-component) of our starter component.
 
     Your code should work at the end of every step. If you run into issues or your code doesn't compile, please come visit us on the [PureScript user forum](https://discourse.purescript.org) or the [#fpchat Slack channel](https://functionalprogramming.slack.com).
 
 
 ## Basic Setup
 
-In this tutorial, we'll build a typeahead component from scratch. You can either follow along using the minimal component from the [Project Setup section](https://github.citizennet.io/purescript-halogen-select/tutorials/getting-started) or start your own.
+In this tutorial, we'll build a typeahead component from scratch. You can either follow along using the minimal component from the [Project Setup section](https://github.davezuch.io/purescript-halogen-select/tutorials/getting-started) or start your own.
 
 If you didn't follow the project setup, grab the source for our starting component here:
 
@@ -104,14 +104,14 @@ Next, since `Select` is going to be a child component, we'll need to update seve
 - Add a new case to `#!hs eval` for our new `#!hs HandleSelect` query
 
 !!! tip
-    This tutorial doesn't explain things like child queries, slots, inputs, rendering, `#!hs Free`, `#!hs eval` functions, or other crucial Halogen knowledge. If you feel lost, I'd recommend checking out the [dropdown tutorial](https://citizennet.github.io/purescript-halogen-select/tutorials/dropdown) before continuing.
+    This tutorial doesn't explain things like child queries, slots, inputs, rendering, `#!hs Free`, `#!hs eval` functions, or other crucial Halogen knowledge. If you feel lost, I'd recommend checking out the [dropdown tutorial](https://davezuch.github.io/purescript-halogen-select/tutorials/dropdown) before continuing.
 
 Of course, we won't be prepared to handle messages or use `Select`'s queries without knowing what they are. Let's start with the query type for the `Select` component, `#!hs QueryF`:
 
 ```hs
 -- | - `o`: The query type of the component that will mount this component in a child slot.
--- |        This allows you to embed your own queries into the `Select` component.
--- | - `item`: Your custom item type. It can be a simple type like `String`, or something
+| --  | This allows you to embed your own queries into the `Select` component. |
+| --- | ---------------------------------------------------------------------- |`item`: Your custom item type. It can be a simple type like `String`, or something
 -- |           complex like `CalendarItem StartDate EndDate (Maybe Disabled)`.
 data QueryF o item a
   = Search String a
@@ -134,7 +134,7 @@ Already we're faced with an interesting decision: how should we fill in the type
 The second type argument is more interesting. `Select` allows you to provide any type as your selectable "item". While in this tutorial we're going to stick with strings you could very well make a significantly more information-rich type.
 
 ??? tip "Writing useful item types"
-    Any time you need to render some items differently than others, or you need different logic for when one item is selected vs. another, you should encode that information in the item type. For example, at CitizenNet, our calendar component has an item type like this:
+    Any time you need to render some items differently than others, or you need different logic for when one item is selected vs. another, you should encode that information in the item type. For example, at davezuch, our calendar component has an item type like this:
 
     ```hs
     data CalendarItem = CalendarItem SelectedStatus DisabledStatus Boundary Range Date
@@ -511,7 +511,7 @@ typeahead parentState childState =
 Let's start with the first one: `#!hs renderSelections`. This function will leverage only the parent state, which contains the selections, and won't use anything from `Select`.
 
 !!! tip
-    In fact you don't need to render the selections inside `Select` at all -- you could render the selections first, and then mount the `Select` component below. We use this approach for our own typeaheads at CitizenNet. However, embedding the selections into the `Select` component allows me to show off how embedding parent queries works and it's an equally viable design, so that's the approach taken here.
+    In fact you don't need to render the selections inside `Select` at all -- you could render the selections first, and then mount the `Select` component below. We use this approach for our own typeaheads at davezuch. However, embedding the selections into the `Select` component allows me to show off how embedding parent queries works and it's an equally viable design, so that's the approach taken here.
 
 We're just going to render an unordered list of items that have been selected. If the user clicks on one of them, then we'll remove the selection. We can remove items with the `#!hs Remove` query that we wrote a little earlier.
 

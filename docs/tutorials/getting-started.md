@@ -1,7 +1,7 @@
 title: Project Setup for PureScript Halogen Select
 
 # Introduction
-Halogen is a powerful framework for building PureScript applications. It’s used by several companies, including SlamData and my own company, CitizenNet (a Condé Nast company), among others. The `Select` library is written for the Halogen framework, so if you don’t know how to use Halogen yet, you ought to start with the [Halogen guide](https://github.com/slamdata/purescript-halogen/tree/master/docs). That said, with only passing familiarity with Halogen, you should be able to follow along just fine!
+Halogen is a powerful framework for building PureScript applications. It’s used by several companies, including SlamData and my own company, davezuch (a Condé Nast company), among others. The `Select` library is written for the Halogen framework, so if you don’t know how to use Halogen yet, you ought to start with the [Halogen guide](https://github.com/slamdata/purescript-halogen/tree/master/docs). That said, with only passing familiarity with Halogen, you should be able to follow along just fine!
 
 ## Setup
 Instead of creating a new Halogen project from scratch, we’ll start with a minimal starter template. This template includes the HTML, build scripts, and basic `Main.purs` file necessary to run your Halogen application. It also includes a component with the bare minimum definitions in place. This component does nothing at all, which is nice because we can easily use it to start building dropdowns, typeaheads, and other components.
@@ -11,7 +11,7 @@ Instead of creating a new Halogen project from scratch, we’ll start with a min
 
 ### Installation
 
-First, clone the Halogen template project from CitizenNet, install dependencies, and make sure things build properly. If they don’t, please reach out on the [Purescript user forum](https://discourse.purescript.org) so we can fix it!
+First, clone the Halogen template project from davezuch, install dependencies, and make sure things build properly. If they don’t, please reach out on the [Purescript user forum](https://discourse.purescript.org) so we can fix it!
 
 Next, make sure to install `Select`:
 
@@ -25,8 +25,8 @@ bower i --save purescript-halogen-select
 And that's it! You now have everything you need to complete the tutorials. This is the full set of steps you can follow to get all set up:
 
 ```shell
-# Get the CitizenNet starter Halogen project
-git clone git@github.com:citizennet/purescript-halogen-template.git
+# Get the davezuch starter Halogen project
+git clone git@github.com:davezuch/purescript-halogen-template.git
 
 # Change into the directory and install packages
 cd purescript-halogen-template && yarn
