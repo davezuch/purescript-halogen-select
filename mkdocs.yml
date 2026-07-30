@@ -1,28 +1,28 @@
 # Project information
-site_name: 'Select Documentation'
-site_description: 'Building blocks for common selection user interfaces in PureScript & Halogen'
-site_author: 'Thomas Honeyman'
-site_url: 'https://citizennet.github.io/purescript-halogen-select'
+site_name: "Select Documentation"
+site_description: "Building blocks for common selection user interfaces in PureScript & Halogen"
+site_author: "Thomas Honeyman"
+site_url: "https://davezuch.github.io/purescript-halogen-select"
 
 # Repository
-repo_name: 'purescript-halogen-select'
-repo_url: 'https://github.com/citizennet/purescript-halogen-select'
+repo_name: "purescript-halogen-select"
+repo_url: "https://github.com/davezuch/purescript-halogen-select"
 
 # Copyright
-copyright: 'Copyright &copy; 2019 CitizenNet'
+copyright: "Copyright &copy; 2019 davezuch"
 
 # Config
 theme:
-  name: 'material'
-  language: 'en'
+  name: "material"
+  language: "en"
   palette:
-    primary: 'cyan'
-    accent: 'cyan'
+    primary: "cyan"
+    accent: "cyan"
   font:
-    text: 'Open Sans'
-    code: 'Roboto Mono'
+    text: "Open Sans"
+    code: "Roboto Mono"
   logo:
-    icon: 'school'
+    icon: "school"
 
 extra_javascript:
   - js/app.js
@@ -59,22 +59,21 @@ markdown_extensions:
 
 # Site architecture
 pages:
-  - Home: 'index.md'
+  - Home: "index.md"
   # - Design Philosophy: 'index.md'
   - Tutorials:
-    - 'Project setup': 'tutorials/getting-started.md'
-    - 'Build a dropdown': 'tutorials/dropdown.md'
-    - 'Build a typeahead': 'tutorials/typeahead.md'
+      - "Project setup": "tutorials/getting-started.md"
+      - "Build a dropdown": "tutorials/dropdown.md"
+      - "Build a typeahead": "tutorials/typeahead.md"
     # - 'Build a date picker': 'index.md'
   - How To:
-    - 'How to embed parent queries': 'how-to/embed-parent-queries.md'
+      - "How to embed parent queries": "how-to/embed-parent-queries.md"
     # - 'How to leverage the parent state for rendering': 'index.md'
     # - 'How to watch a key on the parent state': 'index.md'
     # - 'How to understand common type errors': 'index.md'
     # - 'How to write your own setProps functions': 'index.md'
   - Concepts:
-    # - 'Advice for writing better render functions': 'index.md'
-    # - 'Controlling component behavior from HTML': 'index.md'
-    - 'Understanding free queries': 'concepts/understanding-free-queries.md'
-  - Examples: 'examples.md'
-
+      # - 'Advice for writing better render functions': 'index.md'
+      # - 'Controlling component behavior from HTML': 'index.md'
+      - "Understanding free queries": "concepts/understanding-free-queries.md"
+  - Examples: "examples.md"

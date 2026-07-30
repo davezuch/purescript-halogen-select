@@ -7,12 +7,12 @@ Dropdowns are among the simplest selection components you will build, but they c
 This tutorial is intended as a beginner-friendly, thorough introduction to `Select`. We'll build a functional dropdown complete with keyboard navigation. Along the way, we'll learn more about how to work with Halogen components, diagnose type errors, and other common PureScript tasks.
 
 !!! info
-    This tutorial assumes you've followed the steps in the [Project Setup](https://citizennet.github.io/purescript-halogen-select/tutorials/getting-started/) section. While not necessary, this code is tested with those steps in mind.
+    This tutorial assumes you've followed the steps in the [Project Setup](https://davezuch.github.io/purescript-halogen-select/tutorials/getting-started/) section. While not necessary, this code is tested with those steps in mind.
 
-    It also assumes familiarity with the Halogen framework. If you need a refresher, try the official [Halogen guide](https://github.com/slamdata/purescript-halogen/tree/master/docs) or the [whirlwind tour](https://citizennet.github.io/purescript-halogen-select/tutorials/getting-started/#a-whirlwind-tour-of-our-starter-component) of our starter component.
+    It also assumes familiarity with the Halogen framework. If you need a refresher, try the official [Halogen guide](https://github.com/slamdata/purescript-halogen/tree/master/docs) or the [whirlwind tour](https://davezuch.github.io/purescript-halogen-select/tutorials/getting-started/#a-whirlwind-tour-of-our-starter-component) of our starter component.
 
     !!! warning ""
-        **If you are already an intermediate or advanced PureScript developer, then this tutorial will read slowly for you. Feel free to skim, get the gist of how the library works, and then move on to the [faster-paced and more advanced typeahead tutorial](https://citizennet.github.io/purescript-halogen-select/tutorials/typeahead).**
+        **If you are already an intermediate or advanced PureScript developer, then this tutorial will read slowly for you. Feel free to skim, get the gist of how the library works, and then move on to the [faster-paced and more advanced typeahead tutorial](https://davezuch.github.io/purescript-halogen-select/tutorials/typeahead).**
 
     Your code should work at the end of every step. If you run into issues or your code doesn't compile, please come visit us on the [PureScript user forum](https://discourse.purescript.org) or the [#fpchat Slack channel](https://functionalprogramming.slack.com).
 
@@ -136,7 +136,7 @@ import Select.Setters as Setters
 ```
 
 !!! tip
-    You can always [view the module documentation for Select on Pursuit](https://pursuit.purescript.org/packages/purescript-halogen-select) or the [source code on GitHub](https://github.com/citizennet/purescript-halogen-select). This is useful when integrating with third-party components so that you can check out the `#!hs Input`, `#!hs State`, `#!hs Query`, and `#!hs Message` types.
+    You can always [view the module documentation for Select on Pursuit](https://pursuit.purescript.org/packages/purescript-halogen-select) or the [source code on GitHub](https://github.com/davezuch/purescript-halogen-select). This is useful when integrating with third-party components so that you can check out the `#!hs Input`, `#!hs State`, `#!hs Query`, and `#!hs Message` types.
 
 Next, we need to update our `#!hs ChildSlot` and `#!hs ChildQuery` types. We're only going to have one dropdown so we can leave the child slot as `#!hs Unit`; we do need to add the `Select` component's query type to our `#!hs ChildQuery` synonym, however.
 
@@ -164,7 +164,7 @@ type ChildQuery o item = Select.Query o item
 type ChildQuery item = Select.Query Query item
 ```
 
-`item` is the type of whatever items you want to be selectable. Commonly these are strings, but can also be custom data types. Later on, in the [typeahead tutorial](https://citizennet.github.io/purescript-halogen-select/tutorials/typeahead), we'll see how powerful custom data types can be for rendering purposes. For our simple dropdown we'll simply specialize this to `#!hs String`:
+`item` is the type of whatever items you want to be selectable. Commonly these are strings, but can also be custom data types. Later on, in the [typeahead tutorial](https://davezuch.github.io/purescript-halogen-select/tutorials/typeahead), we'll see how powerful custom data types can be for rendering purposes. For our simple dropdown we'll simply specialize this to `#!hs String`:
 
 ```hs
 type ChildQuery = Select.Query Query String
@@ -568,7 +568,7 @@ Congratulations! You have successfully built a keyboard-navigable dropdown using
 
 ### Next Steps
 
-This tutorial was a slow, thorough introduction to the `Select` library. But we've only scratched the surface of what you can do with it. I'd recommend continuing on to the faster-paced and more advanced [typeahead tutorial](https://citizennet.github.io/purescript-halogen-select/tutorials/typeahead).
+This tutorial was a slow, thorough introduction to the `Select` library. But we've only scratched the surface of what you can do with it. I'd recommend continuing on to the faster-paced and more advanced [typeahead tutorial](https://davezuch.github.io/purescript-halogen-select/tutorials/typeahead).
 
 ### Source Code
 
